@@ -7,7 +7,7 @@ ExcludeArch: %{ix86}
 
 Name:           ocaml-findlib
 Version:        1.9.6
-Release:        15%{?dist}
+Release:        17%{?dist}
 Summary:        Objective CAML package manager and build helper
 License:        MIT
 
@@ -116,6 +116,10 @@ sed -i '/ocamlfind\.conf/d' .ofiles
 
 
 %changelog
+* Mon Mar 02 2026 Richard W.M. Jones <rjones@redhat.com> - 1.9.6-17
+- Rebuild for CVE-2026-28364
+  Resolves: RHEL-152626
+
 * Wed Oct 30 2024 Troy Dawson <tdawson@redhat.com> - 1.9.6-15
 - Bump release for October 2024 mass rebuild:
   Resolves: RHEL-64018
